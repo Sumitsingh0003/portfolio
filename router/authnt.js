@@ -133,7 +133,7 @@ router.post('/contact', authentications, async (req, res) => {
 
 // Logout ka Page
 router.get('/logout', (req, res) => {
-    res.clearCookie("jwtoken", {path:'/'});
+    res.clearCookie("jwtoken", {path:'/', sameSite: 'none', secure: true });
     res.status(200).send('User Logout')
 });
 
