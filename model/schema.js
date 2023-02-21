@@ -22,7 +22,7 @@ const viewerSchema = new mongoose.Schema({
     },
     password:{
         type:String,
-        required:true
+        required:truer
     },
     cpassword:{
         type:String,
@@ -93,6 +93,7 @@ viewerSchema.methods.generateAuthToken = async function () {
         console.log(error)
     }
 }
+
 
 viewerSchema.methods.addMessage = async function (username, email, phone, city, message) {
     try {
